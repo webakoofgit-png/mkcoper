@@ -1,0 +1,1057 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <!--================= Meta tag =================-->
+    <meta charset="utf-8">
+    <title>Image Gallery </title>
+    <meta name="description" content="">
+    <!--================= Responsive Tag =================-->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--================= Favicon =================-->
+    <link rel="apple-touch-icon" href="assets/images/fav.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
+    <!--================= Bootstrap V5 css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <!--================= Menus css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/menus.css">
+    <!--================= Animate css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <!--================= Owl Carousel css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css">
+    <!--================= Owl Carousel css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css">
+    <!--================= Elegant icon css  =================-->
+    <link rel="stylesheet" type="text/css" href="assets/fonts/elegant-icon.css">
+    <!--================= Fontawesome icon css  =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+    <!--================= Magnific Popup css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <!--================= Animations css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/animations.css">
+    <!--================= style css =================-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--================= Custom Spacing css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/custom-spacing.css">
+    <!--================= Responsive css =================-->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style1.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style2.css">
+    <link rel="stylesheet" href="assets/css/onclick-form-popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+    <style>
+        /* Gallery Page Refresh */
+        .courses-section-seven.gallery-page {
+            background: linear-gradient(180deg, #f8faff 0%, #ffffff 100%);
+        }
+        .courses-section-seven.gallery-page .section-title {
+            font-size: 56px;
+            font-weight: 800;
+            color: #1c2e52;
+            letter-spacing: 0.3px;
+        }
+        .courses-section-seven.gallery-page .filters {
+            margin-bottom: 45px;
+        }
+        .courses-section-seven.gallery-page .filter-group {
+            flex-wrap: wrap;
+            gap: 12px;
+            row-gap: 14px;
+        }
+        .courses-section-seven.gallery-page .filter-group li {
+            margin-right: 0;
+            border: 1px solid #dbe5ff;
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-weight: 700;
+            color: #3c4a67;
+            background: #ffffff;
+            box-shadow: 0 6px 16px rgba(20, 35, 80, 0.06);
+        }
+        .courses-section-seven.gallery-page .filter-group li:hover {
+            color: #2350c8;
+            border-color: #a8bfff;
+        }
+        .courses-section-seven.gallery-page .filter-group li.active {
+            background: #316ffb;
+            border-color: #316ffb;
+            color: #ffffff;
+            box-shadow: 0 12px 24px rgba(49, 111, 251, 0.35);
+        }
+        .courses-section-seven.gallery-page .single-content {
+            width: 33.3333%;
+            padding: 0 12px;
+            margin-bottom: 24px;
+        }
+        .courses-section-seven.gallery-page .courses-card {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 0;
+            border: 1px solid #e8ecf7;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(14, 35, 84, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .courses-section-seven.gallery-page .courses-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(14, 35, 84, 0.14);
+        }
+        .courses-section-seven.gallery-page .single-content {
+            display: block;
+            align-items: initial;
+        }
+        .courses-section-seven.gallery-page .courses-card {
+            height: auto !important;
+            min-height: 0 !important;
+            display: block;
+        }
+        .courses-section-seven.gallery-page .courses-card .card-image {
+            height: auto !important;
+            flex: 0 0 auto !important;
+        }
+        .courses-section-seven.gallery-page .card-image {
+            position: relative;
+            overflow: hidden;
+            background: #f1f5ff;
+        }
+        .courses-section-seven.gallery-page .card-image img {
+            display: block;
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            transition: transform 0.35s ease;
+        }
+        .courses-section-seven.gallery-page .courses-card:hover .card-image img {
+            transform: scale(1.06);
+        }
+        .gallery-link {
+            display: block;
+            position: relative;
+        }
+        .gallery-link::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(17, 37, 77, 0.45);
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            z-index: 1;
+        }
+        .gallery-link .gallery-zoom {
+            position: absolute;
+            inset: 50% auto auto 50%;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #2d63e7;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transform: translate(-50%, -50%) scale(0.85);
+            opacity: 0;
+            z-index: 2;
+            transition: all 0.25s ease;
+            font-size: 18px;
+        }
+        .courses-section-seven.gallery-page .courses-card:hover .gallery-link::before {
+            opacity: 1;
+        }
+        .courses-section-seven.gallery-page .courses-card:hover .gallery-link .gallery-zoom {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        @media (max-width: 1200px) {
+            .courses-section-seven.gallery-page .section-title {
+                font-size: 46px;
+            }
+            .courses-section-seven.gallery-page .single-content {
+                width: 50%;
+            }
+        }
+        @media (max-width: 992px) {
+            .courses-section-seven.gallery-page .single-content {
+                width: 100% !important;
+                padding: 0;
+            }
+            .courses-section-seven.gallery-page .card-image img {
+                height: 230px;
+            }
+            .courses-section-seven.gallery-page .section-title {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    
+    <a href="https://api.whatsapp.com/send?phone=8999100911&amp;text=Hello, I saw add on google, i would like to enquire about Admission."
+    class="float" target="_blank">
+    <!-- <i class="fa- fa-whatsapp my-float"></i> -->
+    <i class="fab fa-whatsapp" style="color: #fafafa;"></i>
+</a>
+    <!--================= Header Section Start Here =================-->
+     <header id="react-header" class="react-header react-header-five" >
+        <div class="menu-part home-five">
+            <div class="container">
+                <!--================= Menu Start Here =================-->
+                <div class="react-main-menu">
+                    <nav>
+                        <!--================= Menu Toggle btn =================-->
+                        <div class="menu-toggle">
+                            <div class="logo"><a href="index.html" class="logo-text"> <img src="assets/images/logo.svg"
+                                        alt="logo"> </a></div>
+                            <button type="button" id="menu-btn">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <!--================= Menu Structure =================-->
+                        <div class="react-inner-menus">
+                            <ul id="backmenu" class="react-menus  react-sub-shadow">
+                                <li> <a href="index.html"><b style="font-weight: 900;">Home</b></a></li>
+                                <li> <a href="about.html"><b style="font-weight: 900;">About</b></a></li>
+                                <li> <a href="SIF.html" style="font-weight: 900;"><b>SIF</b></a></li>
+                                <li> <a href="#" ><b style="font-weight: 900;">Programmes</b></a>
+    <ul>
+        <li><a href="#" style="color: #e9db21;">D. Pharm</a>
+            <ul>
+                <li><a href="assets/images/about/D. Pharmacy-New Syllabus.pdf" style="color: #e9db21;" target="_blank">Syllabus</a></li>
+                <li><a href="assets/images/about/D.pharm Academic_Calander A.Y._2025-26_.pdf" style="color: #e9db21;" target="_blank">Academic Calendar</a></li>
+            </ul>
+        </li>
+        <li><a href="#" style="color: #e9db21;">B. Pharm</a>
+            <ul>
+                <li><a href="assets/images/about/Syllabus_B_Pharm.pdf" style="color: #e9db21;" target="_blank">Syllabus</a></li>
+                <li><a href="#" style="color: #e9db21;">Academic Calendar (Odd & Even Sem)</a>
+                    <ul>
+                        <li><a href="assets/images/about/Sem- I AC-2025-26-odd-sem-BPharm-MPharm-Sem1-515.pdf" style="color: #e9db21;" target="_blank">Odd Sem I</a></li>
+                        <li><a href="assets/images/about/Sem-III AC-2025-26-Odd-Sem-BPharm-MPharm-Sem-III-501.pdf" style="color: #e9db21;" target="_blank">Odd Sem III</a></li>
+                        <li><a href="assets/images/about/Sem-V & VII AC- 2025-26-BPharm_Odd-Sem_441.pdf" style="color: #e9db21;" target="_blank">Odd Sem V & VII</a></li>
+                        <li><a href="assets/images/about/Sem-II AC-2025-26-even-sem-BPharm-MPharm-Sem2-516.pdf" style="color: #e9db21;" target="_blank">Even Sem II</a></li>
+                        <li><a href="assets/images/about/Sem- IV, VI, VIII Academic-Calendar-2025-26-ES-B.-Pharm.pdf" style="color: #e9db21;" target="_blank">Even Sem IV, VI & VIII</a></li>
+                    </ul>
+                </li>
+                <li><a href="B-pharm.html" style="color: #e9db21;">CO PO PEO</a></li>
+            </ul>
+        </li>
+    </ul>
+</li>
+                                <li> <a href="fees-structure.html"><b style="font-weight: 900;">Fees Structure</b></a></li>
+                                <li> <a href="#"><b style="font-weight: 900;">Admissions</b></a>
+    <ul>
+        <li> <a href="how-to-apply.html" style="color: #e9db21;">Admission</a>
+            <ul>
+                <li> <a href="how-to-apply.html" style="color: #e9db21;">Information Brochure</a></li>
+                <li> <a href="how-to-apply.html" style="color: #e9db21;">Eligibility</a></li>
+                <li> <a href="how-to-apply.html" style="color: #e9db21;">Documents Required</a></li>
+                <li> <a href="how-to-apply.html" style="color: #e9db21;">Admission Procedure</a></li>
+            </ul>
+        </li>
+        <li> <a href="infrastructure-facilities.html" style="color: #e9db21;">Infrastructure &amp; Facilities</a>
+            <ul>
+                <li> <a href="infrastructure-facilities.html" style="color: #e9db21;">Laboratories</a></li>
+                <li> <a href="infrastructure-facilities.html" style="color: #e9db21;">Library</a></li>
+                <li> <a href="infrastructure-facilities.html" style="color: #e9db21;">Playground</a></li>
+                <li> <a href="infrastructure-facilities.html" style="color: #e9db21;">Language Lab</a></li>
+            </ul>
+        </li>
+        <li> <a href="other-information.html" style="color: #e9db21;">Other Information</a>
+            <ul>
+                <li> <a href="other-information.html" style="color: #e9db21;">Help Desk</a></li>
+                <li> <a href="other-information.html" style="color: #e9db21;">Code of Conduct</a></li>
+                <li> <a href="other-information.html" style="color: #e9db21;">Scholarship</a></li>
+                <li> <a href="other-information.html" style="color: #e9db21;">Cut-off List</a></li>
+            </ul>
+        </li>
+        
+    </ul>
+</li>
+                               
+                                <li> <a href="#" ><b style="font-weight: 900;">Academics</b></a>
+    <ul>
+        <li><a href="#" style="color: #e9db21;">D. Pharm</a>
+            <ul>
+                <li><a href="assets/images/about/D. Pharmacy-New Syllabus.pdf" style="color: #e9db21;" target="_blank">Syllabus</a></li>
+                <li><a href="assets/images/about/D.pharm Academic_Calander A.Y._2025-26_.pdf" style="color: #e9db21;" target="_blank">Academic Calendar</a></li>
+                <li><a href="#" style="color: #e9db21;">Time Table</a></li>
+                <li><a href="#" style="color: #e9db21;">CO PO</a></li>
+            </ul>
+        </li>
+        <li><a href="#" style="color: #e9db21;">B. Pharm</a>
+            <ul>
+                <li><a href="assets/images/about/Syllabus_B_Pharm.pdf" style="color: #e9db21;" target="_blank">Syllabus</a></li>
+                <li><a href="#" style="color: #e9db21;">Academic Calendar (Odd &amp; Even Sem)</a>
+                    <ul>
+                        <li><a href="assets/images/about/Sem- I AC-2025-26-odd-sem-BPharm-MPharm-Sem1-515.pdf" style="color: #e9db21;" target="_blank">Odd Sem I</a></li>
+                        <li><a href="assets/images/about/Sem-III AC-2025-26-Odd-Sem-BPharm-MPharm-Sem-III-501.pdf" style="color: #e9db21;" target="_blank">Odd Sem III</a></li>
+                        <li><a href="assets/images/about/Sem-V & VII AC- 2025-26-BPharm_Odd-Sem_441.pdf" style="color: #e9db21;" target="_blank">Odd Sem V &amp; VII</a></li>
+                        <li><a href="assets/images/about/Sem-II AC-2025-26-even-sem-BPharm-MPharm-Sem2-516.pdf" style="color: #e9db21;" target="_blank">Even Sem II</a></li>
+                        <li><a href="assets/images/about/Sem- IV, VI, VIII Academic-Calendar-2025-26-ES-B.-Pharm.pdf" style="color: #e9db21;" target="_blank">Even Sem IV, VI &amp; VIII</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" style="color: #e9db21;">Time Table</a></li>
+                <li><a href="#" style="color: #e9db21;">CO PO PEO</a></li>
+            </ul>
+        </li>
+        <li><a href="#" style="color: #e9db21;">College Working Committees</a>
+            <ul>
+                <li><a href="assets/images/commities/Anti-ragging Committee.pdf" style="color: #e9db21;" target="_blank">Anti Ragging Committee</a></li>
+                <li><a href="assets/images/commities/Anti Discrimination Committee.pdf" style="color: #e9db21;" target="_blank">Anti Discrimination Committee</a></li>
+                <li><a href="assets/images/commities/Anti sexual harassment committee .pdf" style="color: #e9db21;" target="_blank">Anti Sexual Harassment Committee</a></li>
+                <li><a href="assets/images/commities/Gender Sensitization cell.pdf" style="color: #e9db21;" target="_blank">Gender Sensitization Cell</a></li>
+                <li><a href="assets/images/commities/Local Managing Committee.pdf" style="color: #e9db21;" target="_blank">Local Managing Committee</a></li>
+                <li><a href="assets/images/commities/Student Grievance Committee.pdf" style="color: #e9db21;" target="_blank">Student Grievance Committee</a></li>
+            </ul>
+        </li>
+    </ul>
+</li><li> <a href="alumni.html"><b style="font-weight: 900;">Alumni</b></a></li>
+                                <li> <a href="placement.html"><b style="font-weight: 900;">Placement</b></a></li>
+
+
+                                <li> <a href="#"><b style="font-weight: 900;">Gallery</b></a>
+                                    <ul>
+                                        <li><a href="image-gallery.html" style="color: #e9db21;">Image Gallery</a></li>
+                                        <li><a href="video-gallery.html" style="color: #e9db21;">Video Gallery</a></li>
+                                    </ul>
+                                </li><li> <a href="events.html"><b style="font-weight: 900;">Event</b></a></li>
+                                <li> <a href="innovation.html"><b style="font-weight: 900;">Innovation</b></a></li><li> <a href="contact.html"><b style="font-weight: 900;">Contact</b></a></li>
+
+                            </ul>
+
+                        </div>
+                    </nav>
+                </div>
+                <!--=================  Back Menu End Here  =================-->
+            </div>
+        </div>
+    </header>
+    <!--================= Header Section End Here =================-->
+    <div class="side-widget open">
+        <div class="inner">
+          <a class="btn btn-blue productCheckout" id="get-started">Enquire Us</a>
+        </div>
+      </div>
+      <div id="popup-container">
+        <div id="popup-window">
+          <div class="modal-content1">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>  
+            <a href="#" class="your-class"></a>
+            <div>
+              <div class="row text-center">
+                
+                <p style="font-size: 30px;">Enquire Now</p>
+              </div>
+              <br>
+              <form action="" method="post" id="footer-form">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input class="form-control" name="first_name" id="first_name" placeholder="First Name *" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input class="form-control" name="last_name" id="last_name" placeholder="Last Name *" required>
+                  </div>
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col-md-6">
+                    <input class="form-control" name="email" id="email" placeholder="Your Email *"required>
+                  </div>
+                  <div class="col-md-6">
+                    <input class="form-control" name="phone" placeholder="Phone *" id="phone">
+                    <br>
+                  </div>
+                </div>
+                <center>
+                  <input type="submit" class="btn btn-primary" value="Submit">
+                </center>
+              </form>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="sticky-icon">
+        <a href="https://api.whatsapp.com/send?phone=8999100911&amp;text=Hello, I saw add on google, i would like to enquire about Admission." class="Whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://www.instagram.com/?hl=en" class="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.facebook.com/" class="Facebook"><i class="fab fa-facebook-f"> </i> Facebook </a>
+        <a href="https://www.youtube.com/" class="Youtube"><i class="fab fa-youtube"></i> Youtube </a>
+        <a href="https://twitter.com/login" class="x-Twitter"><i class="fab fa-x-twitter"></i> Twitter </a>
+        <a href="javascript:void(0)" id="backscrollUp" class="home back-to-top-link"><i class="arrow_carrot-up"></i> Back to Top</a>
+    </div>
+    <!--================= Wrapper Start Here =================-->
+    <div class="react-wrapper">
+        <div class="react-wrapper-inner">
+            <div class="react-breadcrumbs">
+                <div class="breadcrumbs-wrap">
+                    <img class="desktop" src="assets/images/breadcrumbs/1.png" alt="Breadcrumbs">
+                    <img class="mobile" src="assets/images/breadcrumbs/1.png" alt="Breadcrumbs">
+                    
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!--================= Portfolio Section Start Here =================-->
+
+            <div class="courses-section-seven gallery-page pt---130 pb---100 section-bg">
+                <div class="container">
+                    <div class="section-title-area-seven text-center mb---50">
+                        <div class="section-title">Gallery
+                        </div>
+                    </div>
+                    <div class="filters filter-button-group">
+                        <ul class="filter-group">
+                            <li class="active" data-filter=".all">All</li>
+                            <li data-filter=".pharmacist">Pharmacist Day</li>
+                            <li data-filter=".constitute">Constitution Day</li>
+                            <li data-filter=".umang">Umang Day</li>
+                            <li data-filter=".sem">Seminars</li>
+                            <li data-filter=".blood">Blood Donation Camp</li>
+                            <li data-filter=".news">Newsletter</li>
+                            <li data-filter=".event">Culture Event</li>
+                        </ul>
+                    </div>
+                    <div class="content grid" id="image-popups">
+                        <div class="single-content pharmacist all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/ph-1.png"><img class="p2" src="assets/images/gallery/ph-1.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+
+
+                        <div class="single-content pharmacist all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/ph-2.png"><img class="p2" src="assets/images/gallery/ph-2.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content pharmacist all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/ph-3.png"><img class="p2" src="assets/images/gallery/ph-3.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content pharmacist all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/ph-4.png"><img class="p2" src="assets/images/gallery/ph-4.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content pharmacist all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/ph-4.png"><img class="p2" src="assets/images/gallery/ph-4.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content pharmacist all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/ph-4.png"><img class="p2" src="assets/images/gallery/ph-4.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content constitute all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/con-1.png"><img class="p2" src="assets/images/gallery/con-1.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content constitute  all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/con-2.png"><img class="p2" src="assets/images/gallery/con-2.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content constitute all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/con-3.png"><img class="p2" src="assets/images/gallery/con-3.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content umang  all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/umang-1.png"><img class="p2" src="assets/images/gallery/umang-1.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content umang all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/umang-2.png"><img class="p2" src="assets/images/gallery/umang-2.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content umang all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/umang-3.png"><img class="p2" src="assets/images/gallery/umang-3.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content umang all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/umang-4.png"><img class="p2" src="assets/images/gallery/umang-4.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content umang all  grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/umang-5.png"><img class="p2" src="assets/images/gallery/umang-5.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        
+                      
+                        <div class="single-content blood all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/bl-1.png"><img class="p2" src="assets/images/gallery/bl-1.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content blood all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/bl-2.png"><img class="p2" src="assets/images/gallery/bl-2.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content blood all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/bl-3.png"><img class="p2" src="assets/images/gallery/bl-3.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content blood all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/bl-4.png"><img class="p2" src="assets/images/gallery/bl-4.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content sem all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/sem-1.png"><img class="p2" src="assets/images/gallery/sem-1.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content sem all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/sem-2.png"><img class="p2" src="assets/images/gallery/sem-2.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content sem all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/sem-3.png"><img class="p2" src="assets/images/gallery/sem-3.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content sem all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/sem-4.png"><img class="p2" src="assets/images/gallery/sem-4.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content sem all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/sem-5.png"><img class="p2" src="assets/images/gallery/sem-5.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content sem all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/sem-6.png"><img class="p2" src="assets/images/gallery/sem-6.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content news all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/newsletter-1.png"><img class="p2" src="assets/images/gallery/newsletter-1.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content news all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/newsletter-2.png"><img class="p2" src="assets/images/gallery/newsletter-2.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content news all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/newsletter-3.png"><img class="p2" src="assets/images/gallery/newsletter-3.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content news all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/newsletter-4.png"><img class="p2" src="assets/images/gallery/newsletter-4.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content news all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/newsletter-5.png"><img class="p2" src="assets/images/gallery/newsletter-5.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/1.png"><img class="p2" src="assets/images/gallery/culture events/1.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/3.png"><img class="p2" src="assets/images/gallery/culture events/3.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/4.png"><img class="p2" src="assets/images/gallery/culture events/4.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/5.png"><img class="p2" src="assets/images/gallery/culture events/5.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/6.png"><img class="p2" src="assets/images/gallery/culture events/6.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/7.png"><img class="p2" src="assets/images/gallery/culture events/7.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/8.png"><img class="p2" src="assets/images/gallery/culture events/8.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/9.png"><img class="p2" src="assets/images/gallery/culture events/9.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/10.png"><img class="p2" src="assets/images/gallery/culture events/10.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/11.png"><img class="p2" src="assets/images/gallery/culture events/11.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/12.png"><img class="p2" src="assets/images/gallery/culture events/12.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/13.png"><img class="p2" src="assets/images/gallery/culture events/13.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/14.png"><img class="p2" src="assets/images/gallery/culture events/14.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/15.png"><img class="p2" src="assets/images/gallery/culture events/15.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/16.png"><img class="p2" src="assets/images/gallery/culture events/16.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/17.png"><img class="p2" src="assets/images/gallery/culture events/17.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/18.png"><img class="p2" src="assets/images/gallery/culture events/18.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/19.png"><img class="p2" src="assets/images/gallery/culture events/19.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/20.png"><img class="p2" src="assets/images/gallery/culture events/20.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/21.png"><img class="p2" src="assets/images/gallery/culture events/21.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/22.png"><img class="p2" src="assets/images/gallery/culture events/22.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/23.png"><img class="p2" src="assets/images/gallery/culture events/23.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/24.png"><img class="p2" src="assets/images/gallery/culture events/24.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/25.png"><img class="p2" src="assets/images/gallery/culture events/25.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/26.png"><img class="p2" src="assets/images/gallery/culture events/26.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/27.png"><img class="p2" src="assets/images/gallery/culture events/27.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/28.png"><img class="p2" src="assets/images/gallery/culture events/28.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/29.png"><img class="p2" src="assets/images/gallery/culture events/29.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/30.png"><img class="p2" src="assets/images/gallery/culture events/30.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/31.png"><img class="p2" src="assets/images/gallery/culture events/31.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/32.png"><img class="p2" src="assets/images/gallery/culture events/32.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/33.png"><img class="p2" src="assets/images/gallery/culture events/33.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/34.png"><img class="p2" src="assets/images/gallery/culture events/34.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/35.png"><img class="p2" src="assets/images/gallery/culture events/35.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                        <div class="single-content event all grid-item">
+                            <div class="courses-card">
+                                <div class="card-image"><a class="gallery-link" href="assets/images/gallery/culture events/36.png"><img class="p2" src="assets/images/gallery/culture events/36.png" alt="Gallery image"><span class="gallery-zoom"><i class="fa fa-search-plus"></i></span></a></div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--================= Portfolio Section End Here =================-->
+
+
+
+
+
+
+            <!--================= Footer Section Start Here =================-->
+            <footer id="react-footer" class="react-footer home-main">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 md-mb-30">
+                                <div class="footer-widget footer-widget-1">
+                                    <div class="footer-logo white">
+                                        <a href="index.html" class="logo-text"> <img src="assets/images/footer-logo.png"
+                                                alt="logo"></a>
+                                    </div>
+                                    <h5 class="footer-subtitle">MKCOPER began successful journey in year 2019, under the
+                                        aegis
+                                        Ajinkya charitable foundation with a <br>view to provide top quality education
+                                        to the
+                                        young minds of country.</h5>
+                                    <ul class="footer-address">
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" class="feather feather-phone">
+                                            <path
+                                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                            </path>
+                                        </svg><a href="tel: +919922409256 ">  +919922409256 </a> <br><br>
+                                <a href="tel:+918329075083">+918329075083 </a>
+                                    </li>
+                                        <li><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-mail">
+                                                <path
+                                                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                                </path>
+                                                <polyline points="22,6 12,13 2,6"></polyline>
+                                            </svg><a href="mailto:mkcop2019@gmail.com"> mkcop2019@gmail.com </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 md-mb-30">
+                                <div class="footer-widget footer-widget-2">
+                                    <h3 class="footer-title">Quick Links</h3>
+                                    <div class="footer-menu">
+                                        <ul>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="SIF.html">SIF</a></li>
+                                            <li><a href="events.html">Events</a></li><li><a href="IQAC.html">IQAC</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 md-mb-30">
+                                <div class="footer-widget footer-widget-3">
+                                    <h3 class="footer-title">Useful Links</h3>
+                                    <div class="footer-menu">
+                                        <ul>
+                                            <li><a href="https://www.pci.nic.in/" target="_blank">PCI</a></li>
+                                            <li><a href="https://msbte.org.in/" target="_blank">MSBTE</a></li>
+                                            <li><a href="https://dbatu.ac.in/" target="_blank">DBATU</a></li>
+                                            <li><a href="https://dte.maharashtra.gov.in/" target="_blank">DTE</a></li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="footer-widget footer-widget-4">
+                                    <h3 class="footer-title">Newsletter</h3>
+                                    <div class="footer3__form">
+                                        <p>Get the latest news <br>delivered to you inbox</p>
+                                        <form action="#">
+                                            <input type="email" placeholder="Enter your email">
+                                            <button class="footer3__form-1">
+                                                <i class="arrow_right"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    <div class="container">
+                        <div class="react-copy-left">Ã‚Â© 2024 Reserved By <a href="https://mkcoper.in"
+                                target="_blank">Mahadev
+                                Kanchan Charitable Of Pharmacy Education And Research</a></div>
+                        <div class="react-copy-right">
+                            <div class="react-copy-left"> Designed By <a
+                                    href="https://instagram.com/praavi_consultants?igshid=OGQ5ZDc2ODk2ZA=="
+                                    target="_blank">Praavi Co.</a></div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!--================= Footer Section End Here =================-->
+
+            
+
+            <!--================= Jquery latest version =================-->
+            <script src="assets/js/jquery.min.js"></script>
+            <!--================= Modernizr js =================-->
+            <script src="assets/js/modernizr-2.8.3.min.js"></script>
+            <!--================= Bootstrap js =================-->
+            <script src="assets/js/bootstrap.min.js"></script>
+            <!--================= Owl Carousel js =================-->
+            <script src="assets/js/owl.carousel.min.js"></script>
+            <!--================= Swiper Slider js =================-->
+            <script src="assets/js/swiper-bundle.min.js"></script>
+            <!--================= Isotope filter js =================-->
+            <script src="assets/js/isotope.pkgd.min.js"></script>
+            <!--================= Magnific Popup =================-->
+            <script src="assets/js/jquery.magnific-popup.min.js"></script>
+            <!--================= Counter up js =================-->
+            <script src="assets/js/jquery.counterup.min.js"></script>
+            <script src="assets/js/waypoints.min.js"></script>
+            <!--================= Wow js =================-->
+            <script src="assets/js/wow.min.js"></script>
+            <!--================= menus js =================-->
+            <script src="assets/js/menus.js"></script>
+            <!--================= Plugins js =================-->
+            <script src="assets/js/plugins.js"></script>
+            <!--================= Main js =================-->
+            <script src="assets/js/main.js"></script>
+            <script src="assets/js/onclick-form-popup.js"></script>
+    <script src="assets/js/script.js"></script>
+
+            <script>
+                // dropdown show & hide
+                $(".campus-dropdown-item > .showed").on("click", function () {
+                    var element = $(this).parent(".campus-dropdown-item");
+                    if (element.hasClass("active")) {
+                        element.removeClass("active");
+                    } else {
+                        element.siblings(".campus-dropdown-item").removeClass('active');
+                        element.addClass("active");
+                    }
+                });
+            </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
