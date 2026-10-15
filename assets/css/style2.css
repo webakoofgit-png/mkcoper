@@ -1,0 +1,244 @@
+.sticky-icon  {
+	z-index:1;
+	position:fixed;
+	top:50%;
+	right:0%;
+	width:220px;
+	display:flex;
+	flex-direction:column;}  
+.sticky-icon a  {
+	transform:translate(160px,0px);
+	border-radius:50px 0px 0px 50px;
+	text-align:left;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding:10px;
+	font-size:22px;
+	/* font-family:'Oswald', sans-serif; */
+	transition:all 0.8s;}
+.sticky-icon a:hover  {
+	color:#FFF;
+	transform:translate(0px,0px);}	
+.sticky-icon a:hover i  {
+	transform:rotate(360deg);}
+/*.search_icon a:hover i  {
+	transform:rotate(360deg);}*/
+.Facebook  {
+	background-color:#2C80D3;
+	color:#FFF;}
+	
+.Youtube  {
+	background-color:#fa0910;
+	color:#FFF;}
+	
+.x-Twitter  {
+	background-color:#000;
+	color: #000;
+	}
+	
+.Instagram  {
+	background-color:#FD1D1D;
+	color:#FFF;}
+
+.Whatsapp  {
+	background-color:#25d366;
+	color:#FFF;}
+	
+.Google  {
+	background-color:#d34836;
+	color:#FFF;}						
+.sticky-icon a i {
+	background-color:#FFF;
+	height:40px;
+	width:40px;
+	color:#000;
+	text-align:center;
+	line-height:40px;
+	border-radius:50%;
+	margin-right:20px;
+	transition:all 0.5s;}
+.sticky-icon a i.fa-facebook-f  {
+	background-color:#FFF;
+	color:#2C80D3;}
+	
+
+	
+.sticky-icon a i.fa-instagram  {
+	background-color:#FFF;
+	color:#FD1D1D;}
+	
+.sticky-icon a i.fa-youtube  {
+	background-color:#FFF;
+	color:#fa0910;}
+	
+.sticky-icon a i.fa-twitter  {
+	background-color:#000;
+	color:#FFF;}
+
+.sticky-icon a i.fa-whatsapp  {
+	background-color:#FFF;
+	color:#25d366;}
+
+/* Back to top link - same bar style, hidden until scroll */
+#backscrollUp.back-to-top-link {
+  display: none;
+  background-color: #d2093c;
+  color: #FFF;
+  margin-top: 14px;
+}
+#backscrollUp.back-to-top-link i.arrow_carrot-up {
+  font-size: 22px;
+  background: transparent;
+  color: #FFF;
+  margin-right: 20px;
+}
+
+#myBtn {
+	height:50px;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  text-align:center;
+  padding:10px;
+  text-align:center;
+	line-height:40px;
+  border: none;
+  outline: none;
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.fa-arrow-circle-up  {
+	font-size:30px;}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+.react-blog__area .blog__excerpt {
+	margin: 12px 0 0;
+	color: #4d5765;
+	font-size: 15px;
+	line-height: 1.6;
+}
+.react-blog__area .blog-featured .blog__thumb {
+	height: 340px;
+}
+.react-blog__area .blog-featured .blog__excerpt {
+	font-size: 15px;
+	line-height: 1.7;
+}
+
+/* Blog cards: consistent heights + aligned content */
+.react-blog__area .owl-stage {
+	display: flex;
+}
+.react-blog__area .owl-item {
+	display: flex;
+	height: auto;
+}
+.react-blog__area .blog__card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+.react-blog__area .blog__card[data-href] {
+	cursor: pointer;
+}
+.react-blog__area .blog__card[data-href]:focus {
+	outline: 3px solid rgba(220, 0, 50, 0.35);
+	outline-offset: 2px;
+}
+.course-single .image-banner {
+	width: 100%;
+}
+.course-single .image-banner img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.react-blog__area .blog__thumb {
+	height: 220px;
+	overflow: hidden;
+}
+.home-blog .blog__thumb {
+	height: 280px;
+}
+.react-blog__area .blog__thumb img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+.react-blog__area .blog__card--content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+.react-blog__area .blog__card--content-area {
+	flex: 1;
+}
+.react-blog__area .blog-grid-row > [class*="col-"] {
+	display: flex;
+}
+.react-blog__area .blog-grid-row > [class*="col-"] .blog__card {
+	flex: 1;
+}
+
+/* Academics carousel cards */
+.react_popular_topics .academics-slider .item__inner {
+	border-radius: 8px;
+	overflow: hidden;
+	height: 260px;
+}
+.react_popular_topics .academics-slider .item__inner .icon {
+	height: 100%;
+}
+.react_popular_topics .academics-slider .item__inner .icon img {
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+/* Faculty cards: consistent height and alignment */
+.courses-section-seven .single-content {
+  display: flex;
+  align-items: stretch;
+}
+.courses-section-seven .courses-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 270px;
+  height: 480px;
+  overflow: hidden;
+  background: #ffffff;
+}
+.courses-section-seven .courses-card .card-image {
+  height: 300px;
+  flex: 0 0 300px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+}
+.courses-section-seven .courses-card .card-image img {
+  height: 100%;
+  object-fit: cover;
+}
+.courses-section-seven .courses-card .text {
+  margin-left: 0 !important;
+  padding: 15px 20px 20px;
+  min-height: 120px;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+}
+.courses-section-seven .courses-card .text p {
+  margin: 0;
+  line-height: 1.35;
+}
