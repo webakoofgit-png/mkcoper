@@ -204,7 +204,7 @@
 	display: block;
 }
 
-/* Faculty cards: consistent height and alignment */
+/* Course cards grow with their content. */
 .courses-section-seven .single-content {
   display: flex;
   align-items: stretch;
@@ -214,19 +214,15 @@
   display: flex;
   flex-direction: column;
   max-width: 270px;
-  height: 480px;
-  overflow: hidden;
   background: #ffffff;
 }
 .courses-section-seven .courses-card .card-image {
-  height: 300px;
-  flex: 0 0 300px;
-  overflow: hidden;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
 }
 .courses-section-seven .courses-card .card-image img {
-  height: 100%;
-  object-fit: cover;
+  display: block;
+  height: auto;
+  border-radius: inherit;
 }
 .courses-section-seven .courses-card .text {
   margin-left: 0 !important;
@@ -234,11 +230,50 @@
   min-height: 120px;
   flex: 1;
   width: 100%;
-  overflow: hidden;
   display: flex;
   align-items: flex-start;
 }
 .courses-section-seven .courses-card .text p {
   margin: 0;
   line-height: 1.35;
+}
+
+.staff-section .staff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .staff-section .staff-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 575px) {
+  .staff-section .staff-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.staff-section .staff-grid .single-content {
+  width: 100%;
+  min-width: 0;
+}
+.staff-section .staff-grid .courses-card {
+  max-width: 36rem;
+  margin-bottom: 0;
+}
+.staff-section .courses-card .card-image {
+  border-radius: 10px 10px 0 0;
+  background: #eef1f3;
+}
+.staff-section .courses-card .card-image img {
+  height: 300px;
+  object-fit: contain;
+}
+.staff-section .courses-card .text p {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.staff-section .courses-card .text b {
+  display: block;
 }
